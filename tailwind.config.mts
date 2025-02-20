@@ -1,3 +1,4 @@
+// tailwind.config.mts
 import flowbite from 'flowbite-react/tailwind';
 import { Config } from 'tailwindcss';
 
@@ -66,7 +67,7 @@ const config: Config = {
       }),
     },
   },
-  plugins: [flowbite.plugin()], // Use the corrected plugin variable
+  plugins: [flowbite.plugin()], // Use the plugin from flowbite-react/tailwind
 };
 
 export default config;

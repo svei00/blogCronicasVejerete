@@ -1,6 +1,10 @@
+/* src/app/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Import Flowbite's CSS using URL syntax */
+@import url("flowbite/dist/flowbite.css");
 
 body {
   height: 100vh;
