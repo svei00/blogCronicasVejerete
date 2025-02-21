@@ -1,8 +1,10 @@
+"use client";
 export const revalidate = 60; // or 300, 3600, 86400 depending on your desired interval
 
 import Link from "next/link";
 import CallToAction from "@/app/components/CallToAction";
 import RecentPosts from "./components/RecentPosts";
+import CustomCVButton from "@/app/components/CVButton";
 
 // Define the expected type for a post
 interface Post {
@@ -65,6 +67,14 @@ export default async function Home(): Promise<React.ReactElement> {
       {/* Call To Action Section */}
       <div className="p-3 bg-slate-100 dark:bg-slate-700">
         <CallToAction />
+        {/* Use our custom Flowbite-React button rendered as a div to avoid nested button issues */}
+        <CustomCVButton
+          as="div"
+          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 cursor-pointer"
+          onClick={() => console.log("Flowbite button clicked")}
+        >
+          Sign In
+        </CustomCVButton>
       </div>
 
       {/* Recent Posts Section */}
